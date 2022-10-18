@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CTo-iL-veV">
-    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,7 +13,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="AViewController" customModule="iOS_Life_Cycle" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="AV" customModule="iOS_Life_Cycle" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2oB-Wv-3eL">
@@ -45,7 +45,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CTo-iL-veV" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bS8-60-xm9">
-                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <rect key="frame" x="0.0" y="47" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -62,27 +62,105 @@
             <objects>
                 <viewController storyboardIdentifier="BViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KDJ-8x-c0K" customClass="BViewController" customModule="iOS_Life_Cycle" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FCU-eC-CRB">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Screen B" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZh-YM-8fS">
-                                <rect key="frame" x="145" y="408" width="100" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="trX-z1-oHm">
+                                <rect key="frame" x="36" y="269" width="303" height="274.33333333333326"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Odds-Mentor-Logo" translatesAutoresizingMaskIntoConstraints="NO" id="znS-FN-8s8">
+                                        <rect key="frame" x="0.0" y="0.0" width="303" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="8Fc-jI-7j2"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mW2-zQ-5k2">
+                                        <rect key="frame" x="0.0" y="124" width="303" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XnT-Wc-OnI">
+                                        <rect key="frame" x="0.0" y="182" width="303" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OEY-YT-OeY">
+                                        <rect key="frame" x="0.0" y="240.00000000000003" width="303" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Button"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="k0G-k5-Je6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="trX-z1-oHm" firstAttribute="centerX" secondItem="FCU-eC-CRB" secondAttribute="centerX" id="8ZM-dX-CVh"/>
+                            <constraint firstItem="k0G-k5-Je6" firstAttribute="trailing" secondItem="trX-z1-oHm" secondAttribute="trailing" constant="36" id="aY3-RP-dak"/>
+                            <constraint firstItem="trX-z1-oHm" firstAttribute="leading" secondItem="k0G-k5-Je6" secondAttribute="leading" constant="36" id="bPG-os-1kR"/>
+                            <constraint firstItem="trX-z1-oHm" firstAttribute="centerY" secondItem="FCU-eC-CRB" secondAttribute="centerY" id="hq0-Vl-FK4"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fi5-lX-maq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="564.61538461538464" y="3.5545023696682461"/>
+            <point key="canvasLocation" x="564" y="2.9556650246305418"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="GSC-HE-7Qp">
+            <objects>
+                <viewController storyboardIdentifier="CViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hN8-wP-NUS" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KmD-vN-W8U">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Odds-Mentor-Logo" translatesAutoresizingMaskIntoConstraints="NO" id="V6C-ej-XQH">
+                                <rect key="frame" x="87.666666666666686" y="200.66666666666666" width="200" height="99.999999999999972"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="3qV-6d-N6T"/>
+                                    <constraint firstAttribute="width" constant="200" id="Q1Y-xu-Qv7"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter your email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vpm-xV-NIp">
+                                <rect key="frame" x="24" y="364.66666666666669" width="327" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ra3-z7-ZFU">
+                                <rect key="frame" x="24" y="414.66666666666669" width="327" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uq4-N2-WKo">
+                                <rect key="frame" x="24" y="472.66666666666669" width="327" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Sign In"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DLm-Zc-Jxd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vpm-xV-NIp" firstAttribute="top" secondItem="V6C-ej-XQH" secondAttribute="bottom" constant="64" id="L9T-Rw-96r"/>
+                            <constraint firstItem="vpm-xV-NIp" firstAttribute="centerY" secondItem="KmD-vN-W8U" secondAttribute="centerY" multiplier="0.94" id="Nku-GZ-uDW"/>
+                            <constraint firstItem="DLm-Zc-Jxd" firstAttribute="trailing" secondItem="uq4-N2-WKo" secondAttribute="trailing" constant="24" id="Nsg-5g-Iqh"/>
+                            <constraint firstItem="DLm-Zc-Jxd" firstAttribute="trailing" secondItem="vpm-xV-NIp" secondAttribute="trailing" constant="24" id="XT8-Qm-3Yp"/>
+                            <constraint firstItem="Ra3-z7-ZFU" firstAttribute="leading" secondItem="DLm-Zc-Jxd" secondAttribute="leading" constant="24" id="kQA-zk-Miz"/>
+                            <constraint firstItem="uq4-N2-WKo" firstAttribute="leading" secondItem="DLm-Zc-Jxd" secondAttribute="leading" constant="24" id="oB1-WS-Yro"/>
+                            <constraint firstItem="uq4-N2-WKo" firstAttribute="top" secondItem="Ra3-z7-ZFU" secondAttribute="bottom" constant="24" id="p9Z-uC-toe"/>
+                            <constraint firstItem="DLm-Zc-Jxd" firstAttribute="trailing" secondItem="Ra3-z7-ZFU" secondAttribute="trailing" constant="24" id="qmU-aY-zlv"/>
+                            <constraint firstItem="V6C-ej-XQH" firstAttribute="centerX" secondItem="KmD-vN-W8U" secondAttribute="centerX" id="rfq-Ct-ERv"/>
+                            <constraint firstItem="vpm-xV-NIp" firstAttribute="leading" secondItem="DLm-Zc-Jxd" secondAttribute="leading" constant="24" id="sWw-F9-eG1"/>
+                            <constraint firstItem="Ra3-z7-ZFU" firstAttribute="top" secondItem="vpm-xV-NIp" secondAttribute="bottom" constant="16" id="vnH-PB-uj9"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZLm-EP-nZ8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1319" y="4"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Odds-Mentor-Logo" width="320" height="154.66667175292969"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
